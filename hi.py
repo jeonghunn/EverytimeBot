@@ -70,7 +70,7 @@ for user_repr in (NormalizedLinearRepresentationGraph, DeepRepresentationGraph):
                           biased=False)
 
         # Fit the model and get a result packet 500
-        fit_kwargs = {'epochs': 10, 'learning_rate': .01, 'n_sampled_items': 100, 'verbose': True}
+        fit_kwargs = {'epochs': 500, 'learning_rate': .01, 'n_sampled_items': 100, 'verbose': True}
         result = fit_and_eval(model, user_features, item_features, train_interactions, test_interactions, fit_kwargs,
                               recall_k=100, precision_k=100, ndcg_k=100)
 
