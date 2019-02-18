@@ -2,13 +2,14 @@
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python">
-      <configuration sdkName="" />
+      <configuration sdkName="Remote Python 3.6.5 (ssh://ubuntu@54.173.60.122:6273/home/ubuntu/anaconda3/bin/python3)" />
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Remote Python 3.6.3 (sftp://ubuntu@54.180.97.134:22/home/ubuntu/anaconda3/bin/python3)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.6.5 (ssh://ubuntu@nn.unopenedbox.com:6273/home/ubuntu/anaconda3/bin/python3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Remote Python 3.6.5 (ssh://ubuntu@nn.unopenedbox.com:6273/home/ubuntu/anaconda3/bin/python3) interpreter library" level="application" />
   </component>
 </module>

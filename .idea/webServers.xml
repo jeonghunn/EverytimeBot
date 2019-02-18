@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2642782e-d417-4e93-8515-115e7a8e805e" name="AutoCoreNNServer" url="http://nn.unopenedbox.com">
+        <fileTransfer host="nn.unopenedbox.com" port="6273" privateKey="$PROJECT_DIR$/../tark/tarks.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="6273" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
