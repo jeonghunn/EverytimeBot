@@ -77,7 +77,7 @@ model.add(Dense(units=3, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 
 # 4. 모델 학습시키기
-early_stopping = keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0.00001, patience=1000, verbose=0, mode='min')
+early_stopping = keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0.00001, patience=1500, verbose=0, mode='min')
 model.fit(x_train, y_train, epochs=1000000, batch_size=32, validation_data=(x_val, y_val), callbacks=[early_stopping])
 
 # 5. 모델 평가하기
@@ -93,11 +93,16 @@ yhat = model.predict_classes(xhat)
 for i in range(1):
     print('True : ' + str(argmax(y_test[xhat_idx[i]])) + ', Predict : ' + str(yhat[i]))
 
-c_ar = np.array([[9, 2, 2],
-                 [9, 2, 3],
-                 [9, 9, 9]]
+c_ar = np.array([[9, 9, 7],
+                 [2, 2, 7],
+                 [3, 0, 9]]
                 )
 
 c_test = c_ar.reshape(1, 9).astype('float32') / 255.0
 chat = model.predict_classes(c_test)
 print('True : ' + str(chat))
+
+model_json = model.to_json()
+with open("model.json", "w") as json_file :
+    json_file.write(model_json)
+
