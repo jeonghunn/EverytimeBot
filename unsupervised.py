@@ -20,11 +20,18 @@ x_ar = np.array([[[9, 9, 9],
                  [[9, 9, 9],
                   [0, 3, 0],
                   [0,0, 9]]])
+
+test_ar = np.array([[[9, 6,7],
+                  [0, 0, 7],
+                  [0, 0, 3]]
+])
 PX = x_ar
 
 #reshape
 nsamples, nx, ny = PX.shape
+tsample, nx, ny = test_ar.shape
 X = PX.reshape((nsamples,nx*ny))
+test_ar = test_ar.reshape((tsample,nx*ny))
 #KMeans
 km = KMeans(n_clusters=3)
 km.fit(X)
@@ -40,3 +47,6 @@ ax.set_ylabel("Sepal length")
 ax.set_zlabel("Petal length")
 plt.title("K Means", fontsize=14)
 plt.show()
+
+predict_result =km.predict(test_ar)
+a = 3
