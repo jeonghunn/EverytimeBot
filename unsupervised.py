@@ -4,8 +4,27 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 from sklearn import datasets
 #Iris Dataset
-iris = datasets.load_iris()
-X = iris.data
+#iris = datasets.load_iris()
+x_ar = np.array([[[9, 9, 9],
+                  [0, 0, 9],
+                  [0, 0, 9]],
+
+                 [[9, 0, 0],
+                  [9, 0, 0],
+                  [9, 9, 9]],
+
+                 [[9, 0, 0],
+                  [9, 0, 0],
+                  [9, 9, 9]],
+
+                 [[9, 9, 9],
+                  [0, 3, 0],
+                  [0,0, 9]]])
+PX = x_ar
+
+#reshape
+nsamples, nx, ny = PX.shape
+X = PX.reshape((nsamples,nx*ny))
 #KMeans
 km = KMeans(n_clusters=3)
 km.fit(X)
