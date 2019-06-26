@@ -21,9 +21,9 @@ x_ar = np.array([[[9, 9, 9],
                   [0, 3, 0],
                   [0,0, 9]]])
 
-test_ar = np.array([[[9, 6,7],
-                  [0, 0, 7],
-                  [0, 0, 3]]
+test_ar = np.array([[[9, 0,0],
+                  [9, 0, 1],
+                  [8, 7, 3]]
 ])
 PX = x_ar
 
@@ -49,4 +49,6 @@ plt.title("K Means", fontsize=14)
 plt.show()
 
 predict_result =km.predict(test_ar)
+
+print(predict_result)
 a = 3

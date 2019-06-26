@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AutoCoreNN.iml" filepath="$PROJECT_DIR$/.idea/AutoCoreNN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PentaCoreNN.iml" filepath="$PROJECT_DIR$/.idea/PentaCoreNN.iml" />
     </modules>
   </component>
 </project>

@@ -5,14 +5,14 @@
       <paths name="AutoCoreNNServer">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_783" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/tmp/pycharm_project_143" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="ubuntu@nn.unopenedbox.com:6273">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_143" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_933" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

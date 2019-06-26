@@ -3,5 +3,5 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="Remote Python 3.6.5 (ssh://ubuntu@54.173.60.122:6273/home/ubuntu/anaconda3/bin/python3)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="Remote Python 3.6.5 (sftp://ubuntu@nn.unopenedbox.com:6273/home/ubuntu/anaconda3/envs/tensorflow_p36/bin/python3)" project-jdk-type="Python SDK" />
 </project>
