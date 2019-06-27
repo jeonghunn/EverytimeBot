@@ -185,7 +185,7 @@ class Dialog():
 
         # {'_PAD_': 0, '_STA_': 1, '_EOS_': 2, '_UNK_': 3, 'Hello': 4, 'World': 5, ...}
         self.vocab_dict = {n: i for i, n in enumerate(self.vocab_list)}
-        self.vocab_size = 9000
+        self.vocab_size = len(self.vocab_list)
 
 
 def main(_):

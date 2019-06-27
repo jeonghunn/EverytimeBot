@@ -118,20 +118,20 @@ def learn():
      dialog.load_vocab(FLAGS.voc_path)
      bot.send_message(chat_id = -116418298, text="학습을 시작합니다... 새로운 모델을 생성하는 중 입니다.")
      folder = './model'
-     # for the_file in os.listdir(folder):
-     #  file_path = os.path.join(folder, the_file)
-     #  try:
-     #    if os.path.isfile(file_path):
-     #        os.unlink(file_path)
-     #    #elif os.path.isdir(file_path): shutil.rmtree(file_path)
-     #  except Exception as e:
-     #    print(e)
-     #    bot.send_message(chat_id = -116418298, text="[오류] 기존 모델을 삭제하는데 실패했습니다.")
+     for the_file in os.listdir(folder):
+      file_path = os.path.join(folder, the_file)
+      try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+        #elif os.path.isdir(file_path): shutil.rmtree(file_path)
+      except Exception as e:
+        print(e)
+        bot.send_message(chat_id = -116418298, text="[오류] 기존 모델을 삭제하는데 실패했습니다.")
 
-    # with tf.Session() as sess:
-     # print("새로운 모델을 생성하는 중 입니다.")
+     with tf.Session() as sess:
+      print("새로운 모델을 생성하는 중 입니다.")
 
-     # sess.run(tf.global_variables_initializer())
+      sess.run(tf.global_variables_initializer())
      for i in range(0, index):
          ii = i+1
          tf.reset_default_graph()
@@ -211,17 +211,6 @@ def main():
         chatbot = ChatBotT(FLAGS.voc_path, FLAGS.train_dir)
     except :
         bot.send_message(chat_id = -116418298, text="[오류] 학습 파일에 문제가 있어 재학습해야 합니다.")
-        folder = './model'
-        for the_file in os.listdir(folder):
-         file_path = os.path.join(folder, the_file)
-         try:
-           if os.path.isfile(file_path):
-               os.unlink(file_path)
-           #elif os.path.isdir(file_path): shutil.rmtree(file_path)
-         except Exception as e:
-           print(e)
-           bot.send_message(chat_id = -116418298, text="[오류] 기존 모델을 삭제하는데 실패했습니다.")
-        learn()
     tf.reset_default_graph()
     chatbot = ChatBotT(FLAGS.voc_path, FLAGS.train_dir)
     while 1:
@@ -229,12 +218,11 @@ def main():
      now = datetime.datetime.now()
      bootcount = bootcount + 1
      lcount = lcount + 1
-     if now.hour == 17 :
-         bootcount = 0
-         learn()
-     if lcount > 60 :
-         lcount = 0
-         learnquick()
+
+     if lcount > 180 :
+         os.system("nohup ./restart.sh")
+         sleep(0.2) # 200ms to CTR+C twice
+
      try:
          #data = {'a': 'penta_check', 'auth': 'a1s2d3f4g5h6j7k8l9', 'start_num' : '0', 'number' : '15'}
          #res = requests.post(URL, data=data)
