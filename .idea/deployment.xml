@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ubuntu@nn.unopenedbox.com:6273">
+  <component name="PublishConfigData" autoUpload="Always">
     <serverData>
       <paths name="AutoCoreNNServer">
         <serverdata>
@@ -9,10 +9,10 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="ubuntu@nn.unopenedbox.com:6273">
+      <paths name="ubuntu@nn.unopenedbox.com:6273 (1)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_933" local="$PROJECT_DIR$" />
+            <mapping deploy="/home/ubuntu/penta" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

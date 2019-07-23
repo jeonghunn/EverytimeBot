@@ -1,1 +1,1 @@
-pkill -9 -ef bot.py; nohup /home/ubuntu/anaconda3/envs/tensorflow_p36/bin/python3 bot.py &
+pkill -9 -ef bot.py; nohup /home/jhrunning/anaconda3/envs/penta_env/bin/python3 bot.py &
